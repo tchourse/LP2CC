@@ -22,3 +22,44 @@ SampleApexClass.getValue(40);
 
 
 
+
+
+
+
+
+
+public class LinearSearch {
+
+    // Method to perform linear search
+    public static Integer linearSearch(List<Integer> list, Integer target) {
+        for(Integer i = 0; i < list.size(); i++) {
+            if(list[i] == target) {
+                return i; // Return the index if target found
+            }
+        }
+        return -1; // Return -1 if target not found
+    }
+
+    // Example usage
+    public static void main(String[] args) {
+        List<Integer> numbers = new List<Integer>{5, 10, 15, 20, 25};
+        Integer target = 15;
+        Integer result = linearSearch(numbers, target);
+        if(result != -1) {
+            System.debug('Target found at index: ' + result);
+        } else {
+            System.debug('Target not found in the list.');
+        }
+    }
+}
+
+
+
+
+List<Integer> numbers = new List<Integer>{5, 10, 15, 20, 25};
+Integer target = 15;
+Integer result = LinearSearch.linearSearch(numbers, target);
+System.debug(result != -1 ? 'Target found at index: ' + result : 'Target not found in the list.');
+
+
+
